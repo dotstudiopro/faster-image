@@ -195,18 +195,18 @@ public final class LazyImageView: _PlatformBaseView {
         addSubview(imageView)
         imageView.pinToSuperview()
 
-        placeholderView = {
-            let view = _PlatformBaseView()
-            let color = UIColor(red: 128/255, green: 128/255, blue: 128/255, alpha: 1.0)
-#if os(macOS)
-            view.wantsLayer = true
-            view.layer?.backgroundColor = color.cgColor
-#else
-            view.backgroundColor = color
-#endif
+//         placeholderView = {
+//             let view = _PlatformBaseView()
+//             let color = UIColor(red: 128/255, green: 128/255, blue: 128/255, alpha: 1.0)
+// #if os(macOS)
+//             view.wantsLayer = true
+//             view.layer?.backgroundColor = color.cgColor
+// #else
+//             view.backgroundColor = color
+// #endif
 
-            return view
-        }()
+//             return view
+//         }()
 
         transition = .fadeIn(duration: 0.33)
     }
